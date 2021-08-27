@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://cw.hubwiz.com/card/c/ipfs/1/1/5/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="Content-Language" content="zh-CN">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+  <meta name="keywords" content="ipfs,ipfs 手册">
+  <meta name="description" content="ipfs命令手册中文版">
+  
+  <title>ipfs命令手册 / ipfs daemon - 节点服务进程 - 汇智网</title>
+  
+  <link rel="stylesheet" href="./ipfs/card.min.css">
+  
+  <style>
+    article h1{    
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .wrapper{
+      overflow-x:hidden;
+    }
+    @media (max-width: 768px){
+      .kp-index, .kp-sidebar {display:none;}
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://www.hubwiz.com/" class="navbar-brand">
+                <img src="./ipfs命令手册 _ ipfs daemon - 节点服务进程 - 汇智网_files/logo.png" alt="汇智网欢迎你！">
+            </a>
+        </div>
+        <nav id="hb-nav" class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+                <li><a href="http://cw.hubwiz.com/">教程目录</a></li>
+                <li><a href="http://www.hubwiz.com/course?affid=cw7676" target="_blank">互动课程</a></li>
+                <li><a href="http://sc.hubwiz.com/?affid=cw7676" target="_blank">代码中心</a></li>
+                <li><a href="http://blog.hubwiz.com/" target="_blank">官方博客</a></li>
+                <li><a href="http://www.bimant.com/" target="_blank">BimAnt</a></li>
+            </ul>
+            <a href="http://www.hubwiz.com/"><img src="./ipfs命令手册 _ ipfs daemon - 节点服务进程 - 汇智网_files/slogan.png" style="max-width:100%"></a>
+            <ul class="nav navbar-nav navbar-right profile">
+              <li><a href="http://www.hubwiz.com/login"><i class="fa fa-sign-in"></i> 登录 </a></li>
+              <li><a href="http://www.hubwiz.com/register"><i class="fa fa-pencil"></i> 注册</a></li>
+            </ul>                                
+        </nav>
+    </div>
+</header>    
+
+  <div class="wrapper">
+    <div class="kp-index">
+      <h3>
+        <a href="http://cw.hubwiz.com/card/c/ipfs/">ipfs命令手册</a>
+        
+      </h3>
+      <div class="list-group">
+      
+        <div class="list-group-item"><b>ipfs</b></div>
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/1/1/" class="list-group-item " title="ipfs命令行简介">
+                ipfs命令行简介
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/1/2/" class="list-group-item " title="ipfs add - 添加文件或目录">
+                ipfs add - 添加文件或目录
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/1/3/" class="list-group-item " title="ipfs cat - 显示对象内容">
+                ipfs cat - 显示对象内容
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/1/4/" class="list-group-item " title="ipfs commands - 显示可用命令">
+                ipfs commands - 显示可用命令
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/1/5/" class="list-group-item active" title="ipfs daemon - 节点服务进程">
+                ipfs daemon - 节点服务进程
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/1/6/" class="list-group-item " title="ipfs dns - 解析域名">
+                ipfs dns - 解析域名
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/1/7/" class="list-group-item " title="ipfs get - 读取ipfs对象">
+                ipfs get - 读取ipfs对象
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/1/8/" class="list-group-item " title="ipfs id - 显示节点信息">
+                ipfs id - 显示节点信息
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/1/9/" class="list-group-item " title="ipfs init - 初始化配置文件">
+                ipfs init - 初始化配置文件
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/1/10/" class="list-group-item " title="ipfs ls - 显示目录内容">
+                ipfs ls - 显示目录内容
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/1/11/" class="list-group-item " title="ipfs mount - 挂载ipfs">
+                ipfs mount - 挂载ipfs
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/1/12/" class="list-group-item " title="ipfs ping - 测试节点连通性">
+                ipfs ping - 测试节点连通性
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/1/13/" class="list-group-item " title="ipfs resolve - 名称解析">
+                ipfs resolve - 名称解析
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/1/14/" class="list-group-item " title="ipfs update">
+                ipfs update
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/1/15/" class="list-group-item " title="ipfs version - 显示版本信息">
+                ipfs version - 显示版本信息
+              </a>
+            
+          
+      
+        <div class="list-group-item"><b>ipfs bitswap</b></div>
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/2/1/" class="list-group-item " title="ipfs bitswap - bitswap操作接口">
+                ipfs bitswap - bitswap操作接口
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/2/2/" class="list-group-item " title="ipfs bitswap ledger - 显示指定节点的账本">
+                ipfs bitswap ledger - 显示指定节点的账本
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/2/3/" class="list-group-item " title="ipfs bitswap stat - 显示诊断信息">
+                ipfs bitswap stat - 显示诊断信息
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/2/4/" class="list-group-item " title="ipfs bitswap unwant - 从需求列表移除块">
+                ipfs bitswap unwant - 从需求列表移除块
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/2/5/" class="list-group-item " title="ipfs bitswap wanglist - 显示需求列表中的块">
+                ipfs bitswap wanglist - 显示需求列表中的块
+              </a>
+            
+          
+      
+        <div class="list-group-item"><b>ipfs block</b></div>
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/3/1/" class="list-group-item " title="ipfs block - 裸块操作接口">
+                ipfs block - 裸块操作接口
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/3/2/" class="list-group-item " title="ipfs block get - 读取裸块">
+                ipfs block get - 读取裸块
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/3/3/" class="list-group-item " title="ipfs block put - 写入裸块">
+                ipfs block put - 写入裸块
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/3/4/" class="list-group-item " title="ipfs block rm - 删除裸块">
+                ipfs block rm - 删除裸块
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/3/5/" class="list-group-item " title="ipfs block stat - 显示块信息">
+                ipfs block stat - 显示块信息
+              </a>
+            
+          
+      
+        <div class="list-group-item"><b>ipfs bootstrap</b></div>
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/4/1/" class="list-group-item " title="ipfs bootstrap - 管理启动引导节点">
+                ipfs bootstrap - 管理启动引导节点
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/4/2/" class="list-group-item " title="ipfs bootstrap add - 添加引导节点">
+                ipfs bootstrap add - 添加引导节点
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/4/3/" class="list-group-item " title="ipfs bootstrap list - 显示引导节点列表">
+                ipfs bootstrap list - 显示引导节点列表
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/4/4/" class="list-group-item " title="ipfs bootstrap rm - 删除引导节点">
+                ipfs bootstrap rm - 删除引导节点
+              </a>
+            
+          
+      
+        <div class="list-group-item"><b>ipfs config</b></div>
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/5/1/" class="list-group-item " title="ipfs config - 配置管理">
+                ipfs config - 配置管理
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/5/2/" class="list-group-item " title="ipfs config edit - 编辑配置文件">
+                ipfs config edit - 编辑配置文件
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/5/3/" class="list-group-item " title="ipfs config replace - 替换配置文件">
+                ipfs config replace - 替换配置文件
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/5/4/" class="list-group-item " title="ipfs config show - 显示配置文件内容">
+                ipfs config show - 显示配置文件内容
+              </a>
+            
+          
+      
+        <div class="list-group-item"><b>ipfs diag</b></div>
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/6/1/" class="list-group-item " title="ipfs diag - 系统诊断">
+                ipfs diag - 系统诊断
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/6/2/" class="list-group-item " title="ipfs diag cmds - 显示运行的命令">
+                ipfs diag cmds - 显示运行的命令
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/6/3/" class="list-group-item " title="ipfs diag cmds clear - 清理非活动请求">
+                ipfs diag cmds clear - 清理非活动请求
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/6/4/" class="list-group-item " title="ipfs diag cmds set-time - 设置非活动请求的保存时长">
+                ipfs diag cmds set-time - 设置非活动请求的保存时长
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/6/5/" class="list-group-item " title="ipfs diag sys - 显示系统信息">
+                ipfs diag sys - 显示系统信息
+              </a>
+            
+          
+      
+        <div class="list-group-item"><b>ipfs file</b></div>
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/7/1/" class="list-group-item " title="ipfs file">
+                ipfs file
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/7/2/" class="list-group-item " title="ipfs file ls">
+                ipfs file ls
+              </a>
+            
+          
+      
+        <div class="list-group-item"><b>ipfs files</b></div>
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/8/1/" class="list-group-item " title="ipfs files - 文件操作接口">
+                ipfs files - 文件操作接口
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/8/2/" class="list-group-item " title="ipfs files cp - 拷贝文件">
+                ipfs files cp - 拷贝文件
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/8/3/" class="list-group-item " title="ipfs files flush - 刷新磁盘文件">
+                ipfs files flush - 刷新磁盘文件
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/8/4/" class="list-group-item " title="ipfs files ls - 显示目录内容">
+                ipfs files ls - 显示目录内容
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/8/5/" class="list-group-item " title="ipfs files mkdir - 创建目录">
+                ipfs files mkdir - 创建目录
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/8/6/" class="list-group-item " title="ipfs files mv - 移动/更名文件">
+                ipfs files mv - 移动/更名文件
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/8/7/" class="list-group-item " title="ipfs files read - 读取文件">
+                ipfs files read - 读取文件
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/8/8/" class="list-group-item " title="ipfs files rm - 删除文件">
+                ipfs files rm - 删除文件
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/8/9/" class="list-group-item " title="ipfs files stat - 显示文件统计信息">
+                ipfs files stat - 显示文件统计信息
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/8/10/" class="list-group-item " title="ipfs files write - 写入文件">
+                ipfs files write - 写入文件
+              </a>
+            
+          
+      
+        <div class="list-group-item"><b>ipfs filestore</b></div>
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/9/1/" class="list-group-item " title="ipfs filestore dups">
+                ipfs filestore dups
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/9/2/" class="list-group-item " title="ipfs filestore ls">
+                ipfs filestore ls
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/9/3/" class="list-group-item " title="ipfs filestore verify">
+                ipfs filestore verify
+              </a>
+            
+          
+      
+        <div class="list-group-item"><b>ipfs key</b></div>
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/10/1/" class="list-group-item " title="ipfs key - 管理名称密钥">
+                ipfs key - 管理名称密钥
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/10/2/" class="list-group-item " title="ipfs key gen - 生成名称密钥">
+                ipfs key gen - 生成名称密钥
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/10/3/" class="list-group-item " title="ipfs key list - 显示名称密钥列表">
+                ipfs key list - 显示名称密钥列表
+              </a>
+            
+          
+      
+        <div class="list-group-item"><b>ipfs log</b></div>
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/11/1/" class="list-group-item " title="ipfs log - 日志管理">
+                ipfs log - 日志管理
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/11/2/" class="list-group-item " title="ipfs log level - 调整日志等级">
+                ipfs log level - 调整日志等级
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/11/3/" class="list-group-item " title="ipfs log tail - 跟踪显示事件日志">
+                ipfs log tail - 跟踪显示事件日志
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/11/4/" class="list-group-item " title="ipfs log ls - 列举日志子系统">
+                ipfs log ls - 列举日志子系统
+              </a>
+            
+          
+      
+        <div class="list-group-item"><b>ipfs name</b></div>
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/12/1/" class="list-group-item " title="ipfs name - 管理IPNS名称">
+                ipfs name - 管理IPNS名称
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/12/2/" class="list-group-item " title="ipfs name publish - 发布IPNS名称">
+                ipfs name publish - 发布IPNS名称
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/12/3/" class="list-group-item " title="ipfs name resolve - 解析IPNS名称">
+                ipfs name resolve - 解析IPNS名称
+              </a>
+            
+          
+      
+        <div class="list-group-item"><b>ipfs object</b></div>
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/13/1/" class="list-group-item " title="ipfs object - 管理ipfs对象">
+                ipfs object - 管理ipfs对象
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/13/2/" class="list-group-item " title="ipfs object data - 显示对象裸数据">
+                ipfs object data - 显示对象裸数据
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/13/3/" class="list-group-item " title="ipfs object diff - 显示对象差异">
+                ipfs object diff - 显示对象差异
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/13/4/" class="list-group-item " title="ipfs object get - 格式化显示对象数据">
+                ipfs object get - 格式化显示对象数据
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/13/5/" class="list-group-item " title="ipfs object links - 显示对象的链接">
+                ipfs object links - 显示对象的链接
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/13/6/" class="list-group-item " title="ipfs object new - 创建新对象">
+                ipfs object new - 创建新对象
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/13/7/" class="list-group-item " title="ipfs object patch - 派生新对象">
+                ipfs object patch - 派生新对象
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/13/8/" class="list-group-item " title="ipfs object patch add-link - 添加链接">
+                ipfs object patch add-link - 添加链接
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/13/9/" class="list-group-item " title="ipfs object patch append-data - 追加新数据">
+                ipfs object patch append-data - 追加新数据
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/13/10/" class="list-group-item " title="ipfs object patch rm-link - 删除链接">
+                ipfs object patch rm-link - 删除链接
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/13/11/" class="list-group-item " title="ipfs object patch set-data - 更新节点数据">
+                ipfs object patch set-data - 更新节点数据
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/13/12/" class="list-group-item " title="ipfs object put - 将数据转化为ipfs对象">
+                ipfs object put - 将数据转化为ipfs对象
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/13/13/" class="list-group-item " title="ipfs object stat - 显示节点统计信息">
+                ipfs object stat - 显示节点统计信息
+              </a>
+            
+          
+      
+        <div class="list-group-item"><b>ipfs pin</b></div>
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/14/1/" class="list-group-item " title="ipfs pin - 管理ipfs对象的固定">
+                ipfs pin - 管理ipfs对象的固定
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/14/2/" class="list-group-item " title="ipfs pin add - 固定ipfs对象">
+                ipfs pin add - 固定ipfs对象
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/14/3/" class="list-group-item " title="ipfs pin ls - 显示被固定对象列表">
+                ipfs pin ls - 显示被固定对象列表
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/14/4/" class="list-group-item " title="ipfs pin rm - 解除ipfs对象的固定">
+                ipfs pin rm - 解除ipfs对象的固定
+              </a>
+            
+          
+      
+        <div class="list-group-item"><b>ipfs pubsub</b></div>
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/15/1/" class="list-group-item " title="ipfs pubsub">
+                ipfs pubsub
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/15/2/" class="list-group-item " title="ipfs pubsub ls">
+                ipfs pubsub ls
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/15/3/" class="list-group-item " title="ipfs pubsub peers">
+                ipfs pubsub peers
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/15/4/" class="list-group-item " title="ipfs pubsub pub">
+                ipfs pubsub pub
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/15/5/" class="list-group-item " title="ipfs pubsub sub">
+                ipfs pubsub sub
+              </a>
+            
+          
+      
+        <div class="list-group-item"><b>ipfs refs</b></div>
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/16/1/" class="list-group-item " title="ipfs refs - 显示对象链接清单">
+                ipfs refs - 显示对象链接清单
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/16/2/" class="list-group-item " title="ipfs refs local - 显示本地对象清单">
+                ipfs refs local - 显示本地对象清单
+              </a>
+            
+          
+      
+        <div class="list-group-item"><b>ipfs repo</b></div>
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/17/1/" class="list-group-item " title="ipfs repo - 管理ipfs仓库">
+                ipfs repo - 管理ipfs仓库
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/17/2/" class="list-group-item " title="ipfs repo fsck - 删除仓库锁文件">
+                ipfs repo fsck - 删除仓库锁文件
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/17/3/" class="list-group-item " title="ipfs repo gc - 回收磁盘空间">
+                ipfs repo gc - 回收磁盘空间
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/17/4/" class="list-group-item " title="ipfs repo stat - 显示仓库统计信息">
+                ipfs repo stat - 显示仓库统计信息
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/17/5/" class="list-group-item " title="ipfs repo verify - 校验仓库完好性">
+                ipfs repo verify - 校验仓库完好性
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/17/6/" class="list-group-item " title="ipfs repo version - 显示仓库版本信息">
+                ipfs repo version - 显示仓库版本信息
+              </a>
+            
+          
+      
+        <div class="list-group-item"><b>ipfs stats</b></div>
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/18/1/" class="list-group-item " title="ipfs stats - 显示ipfs节点统计信息">
+                ipfs stats - 显示ipfs节点统计信息
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/18/2/" class="list-group-item " title="ipfs stats bitswap - 显示bitswap协议统计信息">
+                ipfs stats bitswap - 显示bitswap协议统计信息
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/18/3/" class="list-group-item " title="ipfs stats bw - 显示带宽利用信息">
+                ipfs stats bw - 显示带宽利用信息
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/18/4/" class="list-group-item " title="ipfs stats repo - 显示仓库统计信息">
+                ipfs stats repo - 显示仓库统计信息
+              </a>
+            
+          
+      
+        <div class="list-group-item"><b>ipfs swarm</b></div>
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/19/1/" class="list-group-item " title="ipfs swarm">
+                ipfs swarm
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/19/2/" class="list-group-item " title="ipfs swarm addrs">
+                ipfs swarm addrs
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/19/3/" class="list-group-item " title="ipfs swarm addrs local">
+                ipfs swarm addrs local
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/19/4/" class="list-group-item " title="ipfs swarm connect">
+                ipfs swarm connect
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/19/5/" class="list-group-item " title="ipfs swarm disconnect">
+                ipfs swarm disconnect
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/19/6/" class="list-group-item " title="ipfs swarm filters">
+                ipfs swarm filters
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/19/7/" class="list-group-item " title="ipfs swarm filters add">
+                ipfs swarm filters add
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/19/8/" class="list-group-item " title="ipfs swarm filters rm">
+                ipfs swarm filters rm
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/19/9/" class="list-group-item " title="ipfs swarm peers">
+                ipfs swarm peers
+              </a>
+            
+          
+      
+        <div class="list-group-item"><b>ipfs tar</b></div>
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/20/1/" class="list-group-item " title="ipfs tar">
+                ipfs tar
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/20/2/" class="list-group-item " title="ipfs tar add">
+                ipfs tar add
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/20/3/" class="list-group-item " title="ipfs tar cat">
+                ipfs tar cat
+              </a>
+            
+          
+      
+        <div class="list-group-item"><b>ipfs tour</b></div>
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/21/1/" class="list-group-item " title="ipfs tour">
+                ipfs tour
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/21/2/" class="list-group-item " title="ipfs tour next">
+                ipfs tour next
+              </a>
+            
+          
+              <a href="http://cw.hubwiz.com/card/c/ipfs/1/21/3/" class="list-group-item " title="ipfs tour restart">
+                ipfs tour restart
+              </a>
+            
+          
+          
+      </div>
+      
+       
+    </div>
+    <div class="kp-card">
+      <!--div class="title"></div-->
+      <div class="kp-content">
+        <div class="content-wrapper">
+          <div class="content-path">
+            <ol class="breadcrumb">
+              <li><a href="http://cw.hubwiz.com/card/c">全部教程</a></li>
+              <li class="index-small"><a href="javascript:void()" onclick="toggleIndex()">ipfs命令手册</a></li>
+              <li class="index-big"><a href="http://cw.hubwiz.com/card/c/ipfs/">ipfs命令手册</a></li>
+              
+              <li>ipfs daemon - 节点服务进程</li>
+              
+            </ol>
+          </div>
+          
+<div class="cta" style="display:block;">
+  <a href="http://www.hubwiz.com/course/?type=%E5%8C%BA%E5%9D%97%E9%93%BE&amp;affid=cw7979" target="_blank">
+    <img src="./ipfs命令手册 _ ipfs daemon - 节点服务进程 - 汇智网_files/cw-cta-1.png" style="max-width:100%">
+  </a>
+</div>      
+          
+          <article class="content">
+          <h1 id="ipfs-daemon-ipfs-">ipfs daemon - ipfs节点服务进程</h1>
+<p><code>ipfs daemon</code>命令用来启动一个连接网络的IPFS节点。</p>
+<h3 id="-">命令行</h3>
+<pre class="prettyprint"><code><span class="pln">ipfs daemon </span><span class="pun">[--</span><span class="pln">init</span><span class="pun">]</span><span class="pln"> </span><span class="pun">[--</span><span class="pln">routing</span><span class="pun">=&lt;</span><span class="pln">routing</span><span class="pun">&gt;]</span><span class="pln"> </span><span class="pun">[--</span><span class="pln">mount</span><span class="pun">]</span><span class="pln"> </span><span class="pun">[--</span><span class="pln">writable</span><span class="pun">]</span><span class="pln"> 
+            </span><span class="pun">[--</span><span class="pln">mount</span><span class="pun">-</span><span class="pln">ipfs</span><span class="pun">=&lt;</span><span class="pln">mount</span><span class="pun">-</span><span class="pln">ipfs</span><span class="pun">&gt;]</span><span class="pln"> </span><span class="pun">[--</span><span class="pln">mount</span><span class="pun">-</span><span class="pln">ipns</span><span class="pun">=&lt;</span><span class="pln">mount</span><span class="pun">-</span><span class="pln">ipns</span><span class="pun">&gt;]</span><span class="pln"> 
+            </span><span class="pun">[--</span><span class="pln">unrestricted</span><span class="pun">-</span><span class="pln">api</span><span class="pun">]</span><span class="pln"> </span><span class="pun">[--</span><span class="pln">disable</span><span class="pun">-</span><span class="pln">transport</span><span class="pun">-</span><span class="pln">encryption</span><span class="pun">]</span><span class="pln"> 
+            </span><span class="pun">[--</span><span class="pln">enable</span><span class="pun">-</span><span class="pln">gc</span><span class="pun">]</span><span class="pln"> </span><span class="pun">[--</span><span class="pln">manage</span><span class="pun">-</span><span class="pln">fdlimit</span><span class="pun">=</span><span class="kwd">false</span><span class="pun">]</span><span class="pln"> </span><span class="pun">[--</span><span class="pln">offline</span><span class="pun">]</span><span class="pln"> </span><span class="pun">[--</span><span class="pln">migrate</span><span class="pun">]</span><span class="pln"> 
+            </span><span class="pun">[--</span><span class="pln">enable</span><span class="pun">-</span><span class="pln">pubsub</span><span class="pun">-</span><span class="pln">experiment</span><span class="pun">]</span><span class="pln"> </span><span class="pun">[--</span><span class="pln">enable</span><span class="pun">-</span><span class="pln">mplex</span><span class="pun">-</span><span class="pln">experiment</span><span class="pun">=</span><span class="kwd">false</span><span class="pun">]</span></code></pre><h3 id="-">选项</h3>
+<pre class="prettyprint"><code><span class="pun">--</span><span class="pln">init                         </span><span class="kwd">bool</span><span class="pln">   </span><span class="pun">-</span><span class="pln"> </span><span class="pun">是否使用默认设置自动初始化</span><span class="pln">ipfs</span><span class="pun">，默认值：</span><span class="kwd">false</span><span class="pln">
+</span><span class="pun">--</span><span class="pln">routing                      </span><span class="kwd">string</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> </span><span class="pun">路由选项，默认值：</span><span class="pln">dht
+</span><span class="pun">--</span><span class="pln">mount                        </span><span class="kwd">bool</span><span class="pln">   </span><span class="pun">-</span><span class="pln"> </span><span class="pun">是否将</span><span class="pln">IPFS</span><span class="pun">挂载到文件系统，默认值：</span><span class="kwd">false</span><span class="pln">
+</span><span class="pun">--</span><span class="pln">writable                     </span><span class="kwd">bool</span><span class="pln">   </span><span class="pun">-</span><span class="pln"> </span><span class="pun">是否允许使用</span><span class="str">`POST/PUT/DELETE`</span><span class="pun">修改对象，默认值：</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">.</span><span class="pln">
+</span><span class="pun">--</span><span class="pln">mount</span><span class="pun">-</span><span class="pln">ipfs                   </span><span class="kwd">string</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> </span><span class="pun">当使用--</span><span class="pln">mount</span><span class="pun">选项时</span><span class="pln">IPFS</span><span class="pun">的挂接点，默认值采用配置文件中的设置</span><span class="pln">
+</span><span class="pun">--</span><span class="pln">mount</span><span class="pun">-</span><span class="pln">ipns                   </span><span class="kwd">string</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> </span><span class="pun">当使用--</span><span class="pln">mount</span><span class="pun">选项时</span><span class="pln">IPNS</span><span class="pun">的挂接点，默认值采用配置文件中的设置</span><span class="pln">
+</span><span class="pun">--</span><span class="pln">unrestricted</span><span class="pun">-</span><span class="pln">api             </span><span class="kwd">bool</span><span class="pln">   </span><span class="pun">-</span><span class="pln"> </span><span class="pun">是否允许</span><span class="pln">API</span><span class="pun">访问未列出的哈希，默认值：</span><span class="kwd">false</span><span class="pln">
+</span><span class="pun">--</span><span class="pln">disable</span><span class="pun">-</span><span class="pln">transport</span><span class="pun">-</span><span class="pln">encryption </span><span class="kwd">bool</span><span class="pln">   </span><span class="pun">-</span><span class="pln"> </span><span class="pun">是否进制传输层加密，默认值：</span><span class="kwd">false</span><span class="pun">。当调试协议时可开启该选项</span><span class="pln">
+</span><span class="pun">--</span><span class="pln">enable</span><span class="pun">-</span><span class="pln">gc                    </span><span class="kwd">bool</span><span class="pln">   </span><span class="pun">-</span><span class="pln"> </span><span class="pun">是否启用自动定时仓库垃圾回收，默认值：</span><span class="kwd">false</span><span class="pln">
+</span><span class="pun">--</span><span class="pln">manage</span><span class="pun">-</span><span class="pln">fdlimit               </span><span class="kwd">bool</span><span class="pln">   </span><span class="pun">-</span><span class="pln"> </span><span class="pun">是否按需自动提高文件描述符上限，默认值：</span><span class="kwd">false</span><span class="pln">
+</span><span class="pun">--</span><span class="pln">offline                      </span><span class="kwd">bool</span><span class="pln">   </span><span class="pun">-</span><span class="pln"> </span><span class="pun">是否离线运行，即不连接到网络，仅提供本地</span><span class="pln">API</span><span class="pun">，默认值：</span><span class="kwd">false</span><span class="pln">
+</span><span class="pun">--</span><span class="pln">migrate                      </span><span class="kwd">bool</span><span class="pln">   </span><span class="pun">-</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">对应于</span><span class="pln">mirage</span><span class="pun">提示时输入</span><span class="pln">yes</span><span class="pun">，</span><span class="kwd">false</span><span class="pun">对应于输入</span><span class="kwd">no</span><span class="pln">
+</span><span class="pun">--</span><span class="pln">enable</span><span class="pun">-</span><span class="pln">pubsub</span><span class="pun">-</span><span class="pln">experiment     </span><span class="kwd">bool</span><span class="pln">   </span><span class="pun">-</span><span class="pln"> </span><span class="pun">是否启用发布订阅（</span><span class="pln">pubsub</span><span class="pun">）特性，该特性目前尚处于实验阶段</span><span class="pln">
+</span><span class="pun">--</span><span class="pln">enable</span><span class="pun">-</span><span class="pln">mplex</span><span class="pun">-</span><span class="pln">experiment      </span><span class="kwd">bool</span><span class="pln">   </span><span class="pun">-</span><span class="pln"> </span><span class="pun">是否启用</span><span class="str">`go-multiplex`</span><span class="pun">流多路处理器，默认值：</span><span class="kwd">true</span></code></pre><h3 id="-">说明</h3>
+<p>服务进程将在指定的端口监听网络连接。使用<code>ipfs config Addresses</code>
+命令修改默认端口。</p>
+<p>例如，修改网关监听端口：</p>
+<pre class="prettyprint"><code><span class="pln">ipfs config </span><span class="typ">Addresses</span><span class="pun">.</span><span class="typ">Gateway</span><span class="pln"> </span><span class="pun">/</span><span class="pln">ip4</span><span class="pun">/</span><span class="lit">127.0</span><span class="pun">.</span><span class="lit">0.1</span><span class="pun">/</span><span class="pln">tcp</span><span class="pun">/</span><span class="lit">8082</span></code></pre><p>同样的方式修改API地址：</p>
+<pre class="prettyprint"><code><span class="pln">ipfs config </span><span class="typ">Addresses</span><span class="pun">.</span><span class="pln">API </span><span class="pun">/</span><span class="pln">ip4</span><span class="pun">/</span><span class="lit">127.0</span><span class="pun">.</span><span class="lit">0.1</span><span class="pun">/</span><span class="pln">tcp</span><span class="pun">/</span><span class="lit">5002</span></code></pre><p>在修改地址后，确保重新启动服务进程以便生效。</p>
+<p>默认情况下，网络仅在本地可以访问，如果希望允许其他计算机访问，可以
+使用地址<code>0.0.0.0</code>。例如：</p>
+<pre class="prettyprint"><code><span class="pln">ipfs config </span><span class="typ">Addresses</span><span class="pun">.</span><span class="typ">Gateway</span><span class="pln"> </span><span class="pun">/</span><span class="pln">ip4</span><span class="pun">/</span><span class="lit">0.0</span><span class="pun">.</span><span class="lit">0.0</span><span class="pun">/</span><span class="pln">tcp</span><span class="pun">/</span><span class="lit">8080</span></code></pre><p>当开放API访问时请千万小心，这存在一定的安全风险，因为任何人都可以
+远程控制你的节点。如果你希望远程控制节点，请使用防火墙、授权代理
+或其他服务来保护该API访问地址。</p>
+<h3 id="http-">HTTP头</h3>
+<p>ipfs支持向API和网关传入任意HTTP头信息。你可以使用<code>API.HTTPHeaders</code>和
+<code>Gateway.HTTPHeaders</code>配置项进行配置。例如： </p>
+<pre class="prettyprint"><code><span class="pln">ipfs config </span><span class="pun">--</span><span class="pln">json API</span><span class="pun">.</span><span class="typ">HTTPHeaders</span><span class="pun">.</span><span class="pln">X</span><span class="pun">-</span><span class="typ">Special</span><span class="pun">-</span><span class="typ">Header</span><span class="pln"> </span><span class="str">'["so special :)"]'</span><span class="pln">
+ipfs config </span><span class="pun">--</span><span class="pln">json </span><span class="typ">Gateway</span><span class="pun">.</span><span class="typ">HTTPHeaders</span><span class="pun">.</span><span class="pln">X</span><span class="pun">-</span><span class="typ">Special</span><span class="pun">-</span><span class="typ">Header</span><span class="pln"> </span><span class="str">'["so special :)"]'</span></code></pre><p>需要指出的是，值应当是字符串数组，因为HTTP头可以包含多个值，而且这样也
+方面传给其他的库。</p>
+<p>对于API而言，可以同样的方式为其设置CORS头：</p>
+<pre class="prettyprint"><code><span class="pln">ipfs config </span><span class="pun">--</span><span class="pln">json API</span><span class="pun">.</span><span class="typ">HTTPHeaders</span><span class="pun">.</span><span class="typ">Access</span><span class="pun">-</span><span class="typ">Control</span><span class="pun">-</span><span class="typ">Allow</span><span class="pun">-</span><span class="typ">Origin</span><span class="pln"> </span><span class="str">'["example.com"]'</span><span class="pln">
+ipfs config </span><span class="pun">--</span><span class="pln">json API</span><span class="pun">.</span><span class="typ">HTTPHeaders</span><span class="pun">.</span><span class="typ">Access</span><span class="pun">-</span><span class="typ">Control</span><span class="pun">-</span><span class="typ">Allow</span><span class="pun">-</span><span class="typ">Methods</span><span class="pln"> </span><span class="str">'["PUT", "GET", "POST"]'</span><span class="pln">
+ipfs config </span><span class="pun">--</span><span class="pln">json API</span><span class="pun">.</span><span class="typ">HTTPHeaders</span><span class="pun">.</span><span class="typ">Access</span><span class="pun">-</span><span class="typ">Control</span><span class="pun">-</span><span class="typ">Allow</span><span class="pun">-</span><span class="typ">Credentials</span><span class="pln"> </span><span class="str">'["true"]'</span></code></pre><h3 id="-">停止服务</h3>
+<p>要停止服务进程，发送<code>SIGINT</code>信号即可，例如，使用<code>Ctrl-C</code>组合键。也可以发送
+<code>SIGTERM</code>信号，例如，使用<code>kill</code>命令。服务进程需要稍等一下以便优雅退出，但是你
+可以继续发送一次信息来强制服务进程立刻退出。</p>
+<h3 id="ipfs_path-">IPFS_PATH环境变量</h3>
+<p>ipfs使用本地文件系统建立本地仓库。默认情况下，本地仓库的目录是<code>~/.ipfs</code>，
+可以设置<code>IPFS_PATH</code>环境变量来自定义本地仓库路径：</p>
+<pre class="prettyprint"><code><span class="kwd">export</span><span class="pln"> IPFS_PATH</span><span class="pun">=</span><span class="str">/path/</span><span class="pln">to</span><span class="pun">/</span><span class="pln">ipfsrepo</span></code></pre><h3 id="-">路由</h3>
+<p>默认情况下，ipfs使用分布式哈希表（DHT）进行内容的路由。目前有一个尚处于
+试验阶段的替代方案，使用纯客户端模式来操作分布式哈希表，可以在启动服务
+进程时，使用如下命令启动这一替代路由方案：</p>
+<pre class="prettyprint"><code><span class="pln">ipfs daemon </span><span class="pun">--</span><span class="pln">routing</span><span class="pun">=</span><span class="pln">dhtclient</span></code></pre><p>该选项在实验阶段结束后将转变为一个配置选项。</p>
+<h3 id="-">弃用通知</h3>
+<p>ipfs之前使用过环境变量<code>API_ORIGIN</code>：</p>
+<pre class="prettyprint"><code><span class="kwd">export</span><span class="pln"> API_ORIGIN</span><span class="pun">=</span><span class="str">"http://localhost:8888/"</span></code></pre><p>该环境变量已经被弃用。在当前版本中还可以使用，但在将来的版本中将会删除对
+此环境变量的支持。请使用前述HTTP头信息设置方法来取代该环境变量。</p>
+
+          
+
+          
+          </article>                    
+
+          
+<script src="./ipfs命令手册 _ ipfs daemon - 节点服务进程 - 汇智网_files/push.js.下载"></script><script src="./ipfs命令手册 _ ipfs daemon - 节点服务进程 - 汇智网_files/hm.js.下载"></script><script async="" src="./ipfs命令手册 _ ipfs daemon - 节点服务进程 - 汇智网_files/f.txt"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3968227190566015" data-ad-slot="8712418446" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>         
+
+
+          
+          
+          <div class="content-navi bottom">
+            <div class="btn-group btn-group-justified">
+              
+              <div class="btn-group">
+                <a class="btn btn-default prev" href="http://cw.hubwiz.com/card/c/ipfs/1/1/4/">
+                  <i class="glyphicon glyphicon-arrow-left"></i> ipfs commands - 显示可用命令
+                </a>
+              </div>
+              
+              
+              <div class="btn-group">
+                <a class="btn btn-default next" href="http://cw.hubwiz.com/card/c/ipfs/1/1/6/">
+                  ipfs dns - 解析域名 <i class="glyphicon glyphicon-arrow-right"></i>
+                </a>
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+
+      
+      <div class="kp-sidebar">
+        <div class="block">
+          <div class="heading">在线互动课程</div>
+          <div class="body">
+            <ul>
+              
+              <li><a href="http://xc.hubwiz.com/course/5b2b6e82c02e6b6a59171de2?affid=cw7878" target="_blank" rel="noopener">web3j以太坊开发详解</a></li>
+              
+              <li><a href="http://xc.hubwiz.com/course/5b40462cc02e6b6a59171de4?affid=cw7878" target="_blank" rel="noopener">python以太坊开发详解</a></li>
+              
+              <li><a href="http://xc.hubwiz.com/course/5b36629bc02e6b6a59171de3?affid=cw7878" target="_blank" rel="noopener">php以太坊开发详解</a></li>
+              
+              <li><a href="http://xc.hubwiz.com/course/5b6048c3c02e6b6a59171dee?affid=cw7878" target="_blank" rel="noopener">C#以太坊开发详解</a></li>
+              
+              <li><a href="http://xc.hubwiz.com/course/5a952991adb3847553d205d1?affid=cw7878" target="_blank" rel="noopener">以太坊DApp开发入门</a></li>
+              
+              <li><a href="http://xc.hubwiz.com/course/5abbb7acc02e6b6a59171dd6?affid=cw7878" target="_blank" rel="noopener">以太坊电商DApp实战</a></li>
+              
+              <li><a href="http://xc.hubwiz.com/course/5bb35c90c02e6b6a59171df0?affid=cw7878" target="_blank" rel="noopener">java比特币开发详解</a></li>
+              
+              <li><a href="http://xc.hubwiz.com/course/5b9e779ac02e6b6a59171def?affid=cw7878" target="_blank" rel="noopener">php比特币开发详解</a></li>
+              
+              <li><a href="http://www.hubwiz.com/course/5c766a59f54a5e207931b5a5?affid=cw7878" target="_blank" rel="noopener">C#比特币开发详解</a></li>
+              
+              <li><a href="http://xc.hubwiz.com/course/5b52c0a2c02e6b6a59171ded?affid=cw7878" target="_blank" rel="noopener">EOS区块链DApp开发入门</a></li>
+              
+              <li><a href="http://www.hubwiz.com/course/5c79edcaf697372707791512?affid=cw7878" target="_blank" rel="noopener">深入浅出玩转EOS钱包开发</a></li>
+              
+              <li><a href="http://xc.hubwiz.com/course/5bdec63ac02e6b6a59171df3?affid=cw7878" target="_blank" rel="noopener">tendermint区块链开发详解</a></li>
+              
+              <li><a href="http://www.hubwiz.com/course/5c95f916a8d86b7067ffebb8?affid=cw7878" target="_blank" rel="noopener">Fabric区块链Nodejs开发详解</a></li>
+              
+              <li><a href="http://www.hubwiz.com/course/5c9b89f54898e59b7b63430a?affid=cw7878" target="_blank" rel="noopener">Fabric区块链Java开发详解</a></li>
+              
+            </ul>
+          </div>
+        </div>
+        
+        <div class="block" style="display:none;">
+          <div class="heading">订阅免费课程</div>
+          <div class="body">
+            <form>
+              <div class="form-group">
+                <p>获取免费课程推送</p>
+                <input class="form-control" placeholder="你的邮件地址">
+              </div>
+              <button class="btn btn-default btn-block">订阅免费课程</button>
+            </form>
+          </div>
+        </div>
+        
+        <!--div class="block">
+          <div class="heading">技术交流群</div>
+          <div class="body">
+            <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=8ae12f391bbfc16b91033a3a93b318d603f1ba3d232a990c50be06e0e10e225b">
+              <img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="QQ交流群" title="QQ交流群" style="margin-left:0px">
+            </a>
+            <p></p>
+            <img src="http://xc.hubwiz.com/images/marketing/wxg-ether.png" style="max-width:100%">
+          </div>
+        </div-->
+        
+        <div class="block" style="background:unset;border:unset;">
+          <script async="" src="./ipfs命令手册 _ ipfs daemon - 节点服务进程 - 汇智网_files/f(1).txt"></script>
+          <!-- cw-banner -->
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3968227190566015" data-ad-slot="8712418446" data-ad-format="auto" data-full-width-responsive="true"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>        
+        </div>
+        
+        <div class="block" style="background:unset;border:unset;">
+          <script async="" src="./ipfs命令手册 _ ipfs daemon - 节点服务进程 - 汇智网_files/f(1).txt"></script>
+          <!-- cw-banner -->
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3968227190566015" data-ad-slot="8712418446" data-ad-format="auto" data-full-width-responsive="true"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>        
+        </div>
+        
+      </div>          
+  </div>
+  
+  <script src="./ipfs命令手册 _ ipfs daemon - 节点服务进程 - 汇智网_files/card.min.js.下载"></script>
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?f1ba5b4a33d29d84db69f029b9ace483";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();    
+</script>
+  <script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>    
+
+
+</body></html>
